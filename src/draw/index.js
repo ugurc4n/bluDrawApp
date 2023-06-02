@@ -102,7 +102,7 @@ function Draw() {
 
                   <div className="flex items-center justify-center mt-4 text-lg md:text-xl font-medium">
                     <Image alt="logo2" src={data.logo2} width={32} height={32} />
-                    <div className="ml-2">
+                    <div className="ml-2 text-xl font-medium">
                       {data.team2}
                     </div>
                   </div>
