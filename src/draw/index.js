@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import "./match.module.css";
 import Image from "next/image";
 import juventusLogo from "../app/assets/juventus.png";
 import realLogo from "../app/assets/real.png";
