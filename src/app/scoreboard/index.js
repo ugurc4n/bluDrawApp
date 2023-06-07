@@ -1,119 +1,146 @@
 import React from "react";
 import champLogo from "../assets/champleague.png";
 import Image from "next/image";
+import juventusLogo from "../assets/juventus.png";
+import realLogo from "../assets/real.png";
+import barcaLogo from "../assets/barca.png";
+import bayernLogo from "../assets/bayern.png";
+import cityLogo from "../assets/city.png";
+import liverpoolLogo from "../assets/liverpool.png";
+import romaLogo from "../assets/roma.png";
+import psgLogo from "../assets/psg.png";
+import sevillaLogo from "../assets/sevilla.png";
+import interLogo from "../assets/inter.png";
+import chealseaLogo from "../assets/chelsea.png";
+import unitedLogo from "../assets/united.png";
 // import Link from "next/link";
 
-const teams = [
+const data = [
   {
     id: 1,
     name: "Asım",
     point: 0,
-    goal: 0,
+    goal: -2,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: romaLogo,
   },
   {
     id: 2,
     name: "Batuhan",
     point: 0,
-    goal: 0,
+    goal: -2,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: liverpoolLogo,
   },
   {
     id: 3,
     name: "Can",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 2,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: bayernLogo,
   },
   {
     id: 4,
     name: "Enes",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 2,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: chealseaLogo,
   },
   {
     id: 5,
     name: "Erkan",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 1,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: barcaLogo,
   },
   {
     id: 6,
     name: "Emrah",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 1,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: realLogo,
   },
   {
     id: 7,
     name: "Göksu",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 2,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: cityLogo,
   },
   {
     id: 8,
     name: "Hasan",
     point: 0,
-    goal: 0,
+    goal: -1,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: interLogo,
   },
   {
     id: 9,
     name: "İbrahim",
     point: 0,
-    goal: 0,
+    goal: -3,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: unitedLogo,
   },
   {
     id: 10,
     name: "Osman",
     point: 0,
-    goal: 0,
+    goal: -2,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: juventusLogo,
   },
   {
     id: 11,
     name: "Uğur",
-    point: 0,
-    goal: 0,
-    win: 0,
+    point: 3,
+    goal: 3,
+    win: 1,
     lose: 0,
     equal: 0,
+    teamLogo: psgLogo,
   },
   {
     id: 12,
     name: "Yüksel",
     point: 0,
-    goal: 0,
+    goal: -1,
     win: 0,
-    lose: 0,
+    lose: 1,
     equal: 0,
+    teamLogo: sevillaLogo,
   },
 
 ];
+
+const teams = data.sort((a, b) => b.goal - a.goal)
+
 
 function ScoreBoard() {
   return (
@@ -138,29 +165,30 @@ function ScoreBoard() {
       <div className="scoredetail border-b-[1px] border-[#3B82F6] py-5">
         <div className="mx-9 flex justify-between">
           <div className="users text-white">Oyuncular</div>
-          <div className="details text-white flex text-xl">
-            <p className="pr-5">OM</p>
-            <p className="pr-5">G</p>
-            <p className="pr-5">M</p>
-            <p className="pr-5">B</p>
-            <p>P</p>
+          <div className="details text-white flex justify-between text-lg lg:text-2xl w-28 lg:w-56">
+            <div className="w-7 flex justify-center">AV</div>
+            <div className="w-7 flex justify-center">G</div>
+            <div className="w-7 flex justify-center">M</div>
+            <div className="w-7 flex justify-center">B</div>
+            <div className="w-7 flex justify-center">P</div>
           </div>
         </div>
       </div>
       <div className="teams ">
-        {teams.map((item) => (
+        {teams.map((item, index) => (
           <div className=" border-b-[1px] border-[#BC6BBC]" key={item.id}>
             <div className="mx-9 text-white py-5 flex justify-between">
               <div className="flex items-center justify-around gap-4">
-                <div className="text-2xl w-5 flex justify-center items-center">{item.id}</div>
+                <div className="text-2xl w-5 flex justify-center items-center">{index += 1}</div>
+                <Image alt="logo1" src={item.teamLogo} width={32} height={32} />
                 <div className="text-2xl">{item.name}</div>
               </div>
-              <div className="flex text-2xl">
-                <p className="pr-5">{item.point}</p>
-                <p className="pr-5">{item.goal}</p>
-                <p className="pr-5">{item.win}</p>
-                <p className="pr-5">{item.lose}</p>
-                <p className=" text-emerald-500">{item.equal}</p>
+              <div className="flex justify-between text-lg lg:text-2xl w-28 lg:w-56">
+                <div className="w-7 flex justify-center">{item.goal}</div>
+                <div className="w-7 flex justify-center">{item.win}</div>
+                <div className="w-7 flex justify-center">{item.lose}</div>
+                <div className="w-7 flex justify-center">{item.equal}</div>
+                <div className="w-7 flex justify-center text-emerald-500 ">{item.point}</div>
               </div>
             </div>
           </div>
