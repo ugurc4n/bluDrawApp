@@ -79,7 +79,7 @@ const data = [
   {
     id: 7,
     name: "Göksu",
-    point: 3,
+    point: 6,
     goal: 3,
     win: 2,
     lose: 0,
