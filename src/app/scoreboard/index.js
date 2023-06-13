@@ -13,15 +13,15 @@ import sevillaLogo from "../assets/sevilla.png";
 import interLogo from "../assets/inter.png";
 import chealseaLogo from "../assets/chelsea.png";
 import unitedLogo from "../assets/united.png";
-// import Link from "next/link";
+import Link from "next/link";
 
 const data = [
   {
     id: 1,
     name: "Asım",
-    point: 0,
-    goal: -7,
-    win: 0,
+    point: 3,
+    goal: -4,
+    win: 1,
     lose: 2,
     equal: 0,
     teamLogo: romaLogo,
@@ -30,9 +30,9 @@ const data = [
     id: 2,
     name: "Batuhan",
     point: 0,
-    goal: -5,
+    goal: -8,
     win: 0,
-    lose: 2,
+    lose: 3,
     equal: 0,
     teamLogo: liverpoolLogo,
   },
@@ -40,18 +40,18 @@ const data = [
     id: 3,
     name: "Can",
     point: 6,
-    goal: 7,
+    goal: 4,
     win: 2,
-    lose: 0,
+    lose: 1,
     equal: 0,
     teamLogo: bayernLogo,
   },
   {
     id: 4,
     name: "Enes",
-    point: 3,
-    goal: -1,
-    win: 1,
+    point: 6,
+    goal: 0,
+    win: 2,
     lose: 1,
     equal: 0,
     teamLogo: chealseaLogo,
@@ -59,19 +59,19 @@ const data = [
   {
     id: 5,
     name: "Erkan",
-    point: 6,
+    point: 7,
     goal: 4,
     win: 2,
     lose: 0,
-    equal: 0,
+    equal: 1,
     teamLogo: barcaLogo,
   },
   {
     id: 6,
     name: "Emrah",
-    point: 3,
-    goal: 0,
-    win: 1,
+    point: 6,
+    goal: 3,
+    win: 2,
     lose: 1,
     equal: 0,
     teamLogo: realLogo,
@@ -79,9 +79,9 @@ const data = [
   {
     id: 7,
     name: "Göksu",
-    point: 6,
-    goal: 3,
-    win: 2,
+    point: 9,
+    goal: 6,
+    win: 3,
     lose: 0,
     equal: 0,
     teamLogo: cityLogo,
@@ -89,27 +89,27 @@ const data = [
   {
     id: 8,
     name: "Hasan",
-    point: 3,
+    point: 4,
     goal: 2,
     win: 1,
     lose: 1,
-    equal: 0,
+    equal: 1,
     teamLogo: interLogo,
   },
   {
     id: 9,
     name: "İbrahim",
     point: 0,
-    goal: -6,
+    goal: -9,
     win: 0,
-    lose: 2,
+    lose: 3,
     equal: 0,
     teamLogo: unitedLogo,
   },
   {
     id: 10,
     name: "Osman",
-    point: 0,
+    point: 1,
     goal: -5,
     win: 0,
     lose: 2,
@@ -119,34 +119,34 @@ const data = [
   {
     id: 11,
     name: "Uğur",
-    point: 6,
+    point: 7,
     goal: 6,
     win: 2,
     lose: 0,
-    equal: 0,
+    equal: 1,
     teamLogo: psgLogo,
   },
   {
     id: 12,
     name: "Yüksel",
     point: 3,
-    goal: 2,
+    goal: 1,
     win: 1,
-    lose: 1,
+    lose: 2,
     equal: 0,
     teamLogo: sevillaLogo,
   },
 
 ];
 
-const teams = data.sort((a, b) => b.goal - a.goal)
+const teams = data.sort((a, b) => b.point - a.point + b.goal - a.goal)
 
 
 function ScoreBoard() {
   return (
     <div className="main mt-4">
       <div className="head border-[#3B82F6] border-b-[1px]">
-        <div className="flex mx-9 py-6 justify-between">
+        <div className="flex mx-9 py-6 justify-between items-center">
           <div className="flex items-center">
             <div className="logo">
               <Image alt="logo" className="fill-white" src={champLogo} width={60} height={60} />
@@ -158,7 +158,7 @@ function ScoreBoard() {
               <p className="text-[#BC6BBC]">Sezon 1</p>
             </div>
           </div>
-          {/* <Link className="text-[#7939E9] bg-white font-bold flex justify-center items-center h-12 px-14 rounded-lg" href='/maclar'>Geçmiş Maçlar</Link> */}
+          <Link className="text-[#7939E9] bg-white text-sm lg:text-lg font-bold flex justify-center items-center h-10 px-1 lg:px-4 rounded-lg" href='/gecmis-maclar'>Geçmiş Maçlar</Link>
         </div>
       </div>
 
