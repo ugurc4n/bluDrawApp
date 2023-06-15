@@ -113,7 +113,7 @@ const data = [
     goal: -5,
     win: 0,
     lose: 2,
-    equal: 0,
+    equal: 1,
     teamLogo: juventusLogo,
   },
   {
