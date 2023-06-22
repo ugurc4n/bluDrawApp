@@ -8,7 +8,7 @@ function Draw({ league }) {
       <div className="mb-16 mt-16">
         <div className="flex flex-col md:flex-row justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4 content-center">
-            {league.map((item) => item.matches.map((data, index) => (
+            {league.map((item) => item.matches.reverse().map((data, index) => (
               <div
                 className="w-[350px] md:relative lg:w-[580px] my-0 mx-auto flex items-center justify-around gap-20 lg:gap-40 h-[112px] text-white bg-gradient-to-r bg-repeat from-indigo-800 to-violet-600 border-[1px] border-solid border-gray-200 rounded-md"
                 key={index}
