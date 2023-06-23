@@ -170,8 +170,9 @@ function ScoreBoard() {
       <div className="scoredetail border-b-[1px] border-[#3B82F6] py-5">
         <div className="mx-9 flex justify-between">
           <div className="users text-white">Oyuncular</div>
-          <div className="details text-white flex justify-between text-lg lg:text-2xl w-28 lg:w-56">
+          <div className="details text-white flex justify-between text-lg lg:text-2xl w-28 lg:w-60">
             <div className="w-7 flex justify-center">AV</div>
+            <div className="w-7 flex justify-center">OM</div>
             <div className="w-7 flex justify-center">G</div>
             <div className="w-7 flex justify-center">M</div>
             <div className="w-7 flex justify-center">B</div>
@@ -188,8 +189,9 @@ function ScoreBoard() {
                 <Image alt="logo1" src={item.teamLogo} width={32} height={32} />
                 <div className="text-2xl">{item.name}</div>
               </div>
-              <div className="flex justify-between text-lg lg:text-2xl w-28 lg:w-56">
+              <div className="flex justify-between text-lg lg:text-2xl w-28 lg:w-60">
                 <div className="w-7 flex justify-center">{item.goal}</div>
+                <div className="w-7 flex justify-center">{item?.equal + item?.win + item?.lose}</div>
                 <div className="w-7 flex justify-center">{item.win}</div>
                 <div className="w-7 flex justify-center">{item.lose}</div>
                 <div className="w-7 flex justify-center">{item.equal}</div>
