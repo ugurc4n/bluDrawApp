@@ -20,18 +20,18 @@ const data = [
     id: 1,
     name: "Asım",
     point: 10,
-    goal: 1,
+    goal: -2,
     win: 3,
-    lose: 2,
+    lose: 3,
     equal: 1,
     teamLogo: romaLogo,
   },
   {
     id: 2,
     name: "Batuhan",
-    point: 0,
-    goal: -15,
-    win: 0,
+    point: 3,
+    goal: -12,
+    win: 1,
     lose: 6,
     equal: 0,
     teamLogo: liverpoolLogo,
@@ -39,9 +39,9 @@ const data = [
   {
     id: 3,
     name: "Can",
-    point: 9,
-    goal: 1,
-    win: 3,
+    point: 12,
+    goal: 4,
+    win: 4,
     lose: 3,
     equal: 0,
     teamLogo: bayernLogo,
@@ -49,9 +49,9 @@ const data = [
   {
     id: 4,
     name: "Enes",
-    point: 13,
-    goal: 6,
-    win: 4,
+    point: 16,
+    goal: 14,
+    win: 5,
     lose: 1,
     equal: 1,
     teamLogo: chealseaLogo,
@@ -60,9 +60,9 @@ const data = [
     id: 5,
     name: "Erkan",
     point: 14,
-    goal: 10,
+    goal: 7,
     win: 4,
-    lose: 0,
+    lose: 1,
     equal: 2,
     teamLogo: barcaLogo,
   },
@@ -80,18 +80,18 @@ const data = [
     id: 7,
     name: "Göksu",
     point: 13,
-    goal: 7,
+    goal: 4,
     win: 4,
-    lose: 1,
+    lose: 2,
     equal: 1,
     teamLogo: cityLogo,
   },
   {
     id: 8,
     name: "Hasan",
-    point: 10,
-    goal: 9,
-    win: 3,
+    point: 13,
+    goal: 12,
+    win: 4,
     lose: 2,
     equal: 1,
     teamLogo: interLogo,
@@ -100,17 +100,17 @@ const data = [
     id: 9,
     name: "İbrahim",
     point: 0,
-    goal: -18,
+    goal: -21,
     win: 0,
-    lose: 6,
+    lose: 7,
     equal: 0,
     teamLogo: unitedLogo,
   },
   {
     id: 10,
     name: "Osman",
-    point: 4,
-    goal: -10,
+    point: 7,
+    goal: -7,
     win: 1,
     lose: 4,
     equal: 1,
@@ -119,9 +119,9 @@ const data = [
   {
     id: 11,
     name: "Uğur",
-    point: 13,
-    goal: 10,
-    win: 4,
+    point: 16,
+    goal: 17,
+    win: 5,
     lose: 1,
     equal: 1,
     teamLogo: psgLogo,
@@ -130,9 +130,9 @@ const data = [
     id: 12,
     name: "Yüksel",
     point: 6,
-    goal: -8,
+    goal: -15,
     win: 2,
-    lose: 4,
+    lose: 5,
     equal: 0,
     teamLogo: sevillaLogo,
   },
@@ -170,8 +170,8 @@ function ScoreBoard() {
       <div className="scoredetail border-b-[1px] border-[#3B82F6] py-5">
         <div className="mx-9 flex justify-between">
           <div className="users text-white">Oyuncular</div>
-          <div className="details text-white flex justify-between text-lg lg:text-2xl w-28 lg:w-60">
-            <div className="w-7 flex justify-center">AV</div>
+          <div className="details text-white items-center flex justify-between text-base lg:text-2xl w-32 lg:w-60">
+            <div className="w-7 mr-1 lg:mr-0 flex justify-center">AV</div>
             <div className="w-7 flex justify-center">OM</div>
             <div className="w-7 flex justify-center">G</div>
             <div className="w-7 flex justify-center">M</div>
@@ -189,8 +189,8 @@ function ScoreBoard() {
                 <Image alt="logo1" src={item.teamLogo} width={32} height={32} />
                 <div className="text-2xl">{item.name}</div>
               </div>
-              <div className="flex justify-between text-lg lg:text-2xl w-28 lg:w-60">
-                <div className="w-7 flex justify-center">{item.goal}</div>
+              <div className="flex justify-between items-center text-base lg:text-2xl w-32 lg:w-60">
+                <div className="w-7 mr-1 lg:mr-0 flex justify-center">{item.goal}</div>
                 <div className="w-7 flex justify-center">{item?.equal + item?.win + item?.lose}</div>
                 <div className="w-7 flex justify-center">{item.win}</div>
                 <div className="w-7 flex justify-center">{item.lose}</div>
