@@ -27,7 +27,7 @@ const league = [
         logo2: chealseaLogo,
         // score2: 3,
         hour: "15:30",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
       {
         team1: "Emrah",
@@ -37,7 +37,7 @@ const league = [
         logo2: interLogo,
         // score2: 3,
         hour: "15:00",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
       {
         team1: "Asım",
@@ -47,7 +47,7 @@ const league = [
         logo2: barcaLogo,
         // score2: 3,
         hour: "14:30",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
       {
         team1: "Can",
@@ -57,7 +57,7 @@ const league = [
         logo2: juventusLogo,
         // score2: 3,
         hour: "14:00",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
       {
         team1: "Göksu",
@@ -67,7 +67,7 @@ const league = [
         logo2: psgLogo,
         // score2: 3,
         hour: "13:30",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
       {
         team1: "Batuhan",
@@ -77,7 +77,7 @@ const league = [
         logo2: sevillaLogo,
         // score2: 3,
         hour: "13:00",
-        date: "4 Temmuz",
+        date: "6 Temmuz",
       },
     ]
   }
