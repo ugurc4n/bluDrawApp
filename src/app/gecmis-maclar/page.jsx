@@ -394,10 +394,10 @@ const league = [
       {
         team1: "Osman",
         logo1: juventusLogo,
-        score1: 0,
+        score1: 3,
         team2: "Göksu",
         logo2: cityLogo,
-        score2: 3,
+        score2: 0,
         hour: "15:00",
         date: "4 Temmuz",
       },
