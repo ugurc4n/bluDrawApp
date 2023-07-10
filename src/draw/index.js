@@ -43,6 +43,9 @@ function Draw({ league }) {
                   <div className="flex justify-center text-xl gap-y-4 items-center flex-col">
                     <div>{data.date}</div>
                     <div>{data.hour}</div>
+                    {data.cancel && (
+                      <div>İptal Edildi</div>
+                    )}
                   </div>
                 )}
               </div>
