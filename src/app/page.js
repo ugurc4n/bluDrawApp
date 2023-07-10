@@ -195,7 +195,7 @@ const league = [
         logo1: barcaLogo,
         // score1: 0,
         team2: "Batuhan",
-        logo2: realLogo,
+        logo2: liverpoolLogo,
         // score2: 3,
         hour: "13:00",
         date: "11 Temmuz",
