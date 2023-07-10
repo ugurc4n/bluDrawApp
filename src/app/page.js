@@ -192,7 +192,7 @@ const league = [
       },
       {
         team1: "Enes",
-        logo1: barcaLogo,
+        logo1: chealseaLogo,
         // score1: 0,
         team2: "Batuhan",
         logo2: liverpoolLogo,
